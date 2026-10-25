@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chain of Authenticity – Prototype</title>
+  <meta name="description" content="Prototype: verified delivery for premium products, with an authenticity tracker, two-OTP doorstep checks and payment released only after acceptance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="tape" aria-hidden="true"></div>
+    <div class="top-inner">
+      <div class="brand">
+        <h1>Chain of Authenticity</h1>
+        <p>Verified delivery for premium products. One order, seen from the buyer, the delivery partner and the back office.</p>
+      </div>
+      <div class="controls">
+        <label for="scenario">Scenario</label>
+        <select id="scenario"></select>
+        <button class="btn btn-ghost" data-action="reset">Restart</button>
+      </div>
+    </div>
+    <div class="guide" role="status" aria-live="polite">
+      <strong>Next:</strong> <span id="guide-text"></span>
+    </div>
+  </header>
+
+  <main class="stage">
+    <section class="device" aria-labelledby="buyer-h">
+      <div class="device-head"><h2 id="buyer-h">Buyer app</h2><span class="muted small">Rohan, Hauz Khas</span></div>
+      <div class="device-body" id="buyer"></div>
+    </section>
+
+    <section class="device" aria-labelledby="partner-h">
+      <div class="device-head"><h2 id="partner-h">Delivery partner app</h2><span class="muted small">Route 14, Gurugram hub</span></div>
+      <div class="device-body" id="partner"></div>
+    </section>
+
+    <section class="office" aria-labelledby="office-h">
+      <h2 id="office-h" class="office-title">Back office</h2>
+      <div id="office"></div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>Prototype for the Flipkart APM submission round. All sellers, serials, invoices and GSTINs are mock data. Photo checks are simulated.</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
